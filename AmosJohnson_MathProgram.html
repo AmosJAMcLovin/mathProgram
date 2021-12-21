@@ -1,0 +1,65 @@
+<html>
+<head>   
+<script type="text/javascript">
+
+// Program name: Math Program
+// Purpose: The user inputs two numbers and the program automatically transforms them into math equations (addition, subtraction, multiplication and division).
+// Author: Amos Johnson 
+
+// Addition function which fixes the answer to two decimal places
+function addition(add1, add2) {
+   var adding = document.write(add1 + " + " + add2 + " = " + ((+add1)+(+add2)).toFixed(2) + BR);
+}
+// Subtraction function which ensures the higher number is always subtracted from and fixes the answer to two decimal places
+function subtraction(sub1, sub2) {
+   highSub = Math.max(sub1, sub2);
+   lowSub = Math.min(sub1, sub2);
+   var subtracting = document.write(highSub + " - " + lowSub + " = " + (highSub-lowSub).toFixed(2) + BR);
+}
+// Multiplication function which fixes the answer to two decimal places
+function multiplication(mul1, mul2) {
+    var multiplying = document.write(mul1 + " * " + mul2 + " = " + (mul1*mul2).toFixed(2) + BR);
+}
+// Division function which ensures the higher number is always divided from and fixes the answer to two decimal places
+function division(div1, div2) {
+    highDiv = Math.max(div1, div2);
+    lowDiv = Math.min(div1, div2);
+    var dividing = document.write(highDiv + " / " + lowDiv + " = " + (highDiv/lowDiv).toFixed(2) + BR);
+}
+</script>
+</head>
+<body>
+<script type="text/javascript">
+   // Declare Variables
+   var add;
+   var subtract;
+   var multiply;
+   var divide;
+   var number1 = 0;
+   var number2 = 0;
+   var BR = "<br />";
+
+   // prompt 1 for the first number
+   number1 = prompt("Enter first number:");
+   number1;
+
+   // prompt 2 for the second number
+   number2 = prompt("Enter second number:")
+   number2;
+   
+   // Apply functions to variables
+   add = addition(number1, number2);
+   subtract = subtraction(number1, number2);
+   multiply = multiplication(number1, number2);
+   divide = division(number1, number2);
+
+   // Display results
+   add + BR;
+   subtract + BR;
+   multiply + BR;
+   divide;
+   
+   
+</script> 
+</body>
+</html>
